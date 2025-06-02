@@ -1,0 +1,8 @@
+/devel/
+/build/
+/src/nlopt/
+/src/apriltag_ros
+/src/ee478_px4_sim
+/src/qr_detector
+/src/gpt_test.py
+
