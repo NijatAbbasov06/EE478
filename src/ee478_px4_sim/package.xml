@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ee478_px4_sim</name>
+  <version>0.0.0</version>
+  <description>The ee478_px4_sim package</description>
+
+  <maintainer email="donghun@todo.todo">donghun</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>rospy</depend>
+</package>

@@ -1,0 +1,7 @@
+<launch>
+    <!-- Run waypoint_mission_node -->
+    <node name="waypoint_mission_node" pkg="waypoint_mission" type="waypoint_mission.py" output="screen"/>
+
+    <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_map_world" args="0 0 0 0 0 0 world map" />
+    <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_map_odom" args="0 0 0 0 0 0 world odom" />
+</launch>

@@ -1,0 +1,9 @@
+<launch>
+    <env name="GAZEBO_MODEL_PATH" value="$(find ee478_px4_sim)/models:$GAZEBO_MODEL_PATH" />
+
+    <include file="$(find px4)/launch/ee478_hw5.launch">
+    </include>
+
+    <node pkg="ee478_px4_sim" type="spawn_gate.py" name="spawn_apriltag_node" output="screen" />
+
+</launch>

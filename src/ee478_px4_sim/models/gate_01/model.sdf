@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="gate_01">
+    <static>true</static>
+
+    <!-- Frame -->
+    <link name="bar_bottom">
+      <pose>0 0 0.075 0 0 0</pose>
+      <visual name="bottom">
+        <geometry><box><size>0.05 1.5 0.15</size></box></geometry>
+      </visual>
+    </link>
+
+    <link name="bar_top">
+      <pose>0 0 1.425 0 0 0</pose>
+      <visual name="top">
+        <geometry><box><size>0.05 1.5 0.15</size></box></geometry>
+      </visual>
+    </link>
+
+    <link name="bar_left">
+      <pose>0 0.675 0.75 0 0 0</pose>
+      <visual name="left">
+        <geometry><box><size>0.05 0.15 1.5</size></box></geometry>
+      </visual>
+    </link>
+
+    <link name="bar_right">
+      <pose>0 -0.675 0.75 0 0 0</pose>
+      <visual name="right">
+        <geometry><box><size>0.05 0.15 1.5</size></box></geometry>
+      </visual>
+    </link>
+
+    <!-- Tags -->
+    <include>
+      <uri>model://apriltag_36h11_02</uri>
+      <name>tag0</name>
+      <pose>-0.075 0.675 0.75 0 0 -1.5708</pose>
+    </include>
+
+    <include>
+      <uri>model://apriltag_36h11_03</uri>
+      <name>tag1</name>
+      <pose>-0.075 -0.675 0.75 0 0 1.5708</pose>
+    </include>
+
+
+  </model>
+</sdf>

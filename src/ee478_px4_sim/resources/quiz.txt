@@ -1,0 +1,22 @@
+# quiz_1
+Q: Which number is not divisible by 3?
+
+# quiz_2
+LEFT: Apple
+RIGHT: Carrot
+Q: Which one is a fruit?
+
+# quiz_3
+LEFT: ALPHA
+RIGHT: BETA
+Q: Which comes first alphabetically?
+
+# quiz_4
+LEFT: Gate is upright
+RIGHT: Gate is upside down
+Q: Which one is easier to read?
+
+# quiz_5
+LEFT: Tag ID: 12
+RIGHT: Tag ID: 17
+Q: Which number is prime?

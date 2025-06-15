@@ -1,0 +1,72 @@
+session_name: ee478
+windows: 
+  - window_name: roscore
+    layout: tiled
+    shell_command_before:
+      - source /opt/ros/noetic/setup.bash
+      - cd ~/ACSS_Proj/EE478
+      - source devel/setup.bash
+      - export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:${PX4_DIR}:${PX4_DIR}/Tools/simulation/gazebo-classic/sitl_gazebo-classic
+      - export PX4_DIR=/home/ACSS_Proj/PX4-Autopilot
+      # - source ${PX4_DIR}/Tools/simulation/gazebo-classic/setup_gazebo.bash ${PX4_DIR} ${PX4_DIR}/build/px4_sitl_default
+    panes:
+    - shell_command:
+      - roscore
+    
+  - window_name: drone
+    layout: tiled
+    shell_command_before:
+      - source /opt/ros/noetic/setup.bash
+      - cd ~/ACSS_Proj/EE478
+      - source devel/setup.bash
+      - export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:${PX4_DIR}:${PX4_DIR}/Tools/simulation/gazebo-classic/sitl_gazebo-classic
+      - export PX4_DIR=/home/ACSS_Proj/PX4-Autopilot
+      - sleep 3
+
+      # - source ${PX4_DIR}/Tools/simulation/gazebo-classic/setup_gazebo.bash ${PX4_DIR} ${PX4_DIR}/build/px4_sitl_default
+    panes:
+    # - shell_command:
+      # - roscore
+    - shell_command:
+      - roslaunch ee478_px4_sim tag_spawn.launch
+    - shell_command:
+      - roslaunch apriltag_ros continuous_detection.launch
+    - shell_command:
+      - roslaunch qr_detector detector.launch
+    - shell_command:
+      - cd ~/ee478_ws/src
+      - python3 gpt_test.py
+    # - shell_command:
+    #   - roslaunch plan_manage kino_replan.launch
+    - shell_command:
+      - cd ~/ee478_ws/src
+      - python3 waypoint_mission2.py
+    - shell_command:
+      - cd ~/ee478_ws/src
+      - python3 ee478_offboard_velocity.py
+
+    
+
+
+  - window_name: qgc
+    layout: tiled
+    shell_command_before:
+      - cd ~/Downloads/
+    panes:
+    - shell_command:
+      - ./QGroundControl.AppImage
+
+  # - window_name: GPS
+  #   layout: tiled
+  #   shell_command_before:
+  #     - init_sides
+  #     - source /opt/ros/humble/setup.bash
+  #     - cd /hunter_ws/
+  #     - source install/setup.bash
+  #     - sleep 3
+  #   panes:
+  #   - shell_command:
+  #     - ros2 launch ublox_gps ublox_gps_node-launch.py
+
+  #   - shell_command:
+  #     - ros2 launch ntrip_client ntrip_client_launch.py

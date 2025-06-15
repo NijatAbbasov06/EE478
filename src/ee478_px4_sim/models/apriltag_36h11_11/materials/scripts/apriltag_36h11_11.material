@@ -1,0 +1,15 @@
+material apriltag_36h11_11
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture apriltag_36h11_11.png
+        filtering none none none
+      }
+    }
+  }
+}

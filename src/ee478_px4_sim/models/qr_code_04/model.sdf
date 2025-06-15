@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="qr_code_04">
+    <static>true</static>
+    <link name="qr_panel">
+      <pose>0 0 0 0 0 -1.5708</pose>
+      <visual name="qr_visual">
+        <geometry>
+          <box><size>0.5 0.01 0.5</size></box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://qr_code_04/materials/scripts</uri>
+            <uri>model://qr_code_04/materials/textures</uri>
+            <name>quiz_4</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

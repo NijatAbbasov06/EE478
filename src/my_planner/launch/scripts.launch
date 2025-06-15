@@ -1,0 +1,21 @@
+<launch>
+  <!-- First Script -->
+  <node name="offb_node_py" pkg="my_planner" type="ee478_offboard_velocity.py" output="screen">
+  </node>
+
+  <!-- Second Script -->
+<<<<<<< HEAD
+  <node name="exploration_planner" pkg="my_planner" type="exploration_planner.py" output="screen">
+=======
+  <node name="global_planner" pkg="my_planner" type="global_planner.py" output="screen">
+>>>>>>> adding files
+  </node>
+
+
+  <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_map_world" args="0 0 0 0 0 0 world map" />
+  <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_map_odom" args="0 0 0 0 0 0 world odom" />
+  <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_camera" 
+    args="0 0 0 -1.5708 0 -1.5708 camera_link camera_depth_optical_frame" />
+
+
+</launch>

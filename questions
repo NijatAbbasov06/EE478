@@ -1,0 +1,17 @@
+
+LEFT: Moon
+RIGHT: Sun
+Q: Which one is a star?
+Answer: RIGHT (Sun)
+
+
+LEFT: 9
+RIGHT: 8
+Q: Which number is not divisible by 2?
+Answer: 9
+
+
+LEFT: 8
+RIGHT: 9
+Q: Which number is a perfect cube?
+Answer: 8

@@ -1,0 +1,11 @@
+digraph G {
+"world" -> "odom"[label=" Broadcaster: /static_tf_map_odom\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"world" -> "map"[label=" Broadcaster: /static_tf_map_world\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"map" -> "map_ned"[label=" Broadcaster: /mavros\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"odom" -> "odom_ned"[label=" Broadcaster: /mavros\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "base_link_frd"[label=" Broadcaster: /mavros\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 979.656"[ shape=plaintext ] ;
+}->"base_link";
+}

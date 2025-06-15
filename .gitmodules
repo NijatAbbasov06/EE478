@@ -1,0 +1,9 @@
+[submodule "src/orb_slam3_ros"]
+	path = src/orb_slam3_ros
+	url = https://github.com/thien94/orb_slam3_ros.git
+[submodule "src/qr_detector"]
+	path = src/qr_detector
+	url = https://github.com/MinSungjae/qr_detector
+[submodule "src/apriltag_ros"]
+	path = src/apriltag_ros
+	url = https://github.com/AprilRobotics/apriltag_ros

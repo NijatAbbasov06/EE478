@@ -1,0 +1,15 @@
+material quiz_1
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture quiz_1.png
+        filtering none
+      }
+    }
+  }
+}
